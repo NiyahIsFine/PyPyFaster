@@ -1,7 +1,7 @@
 # PyPyFaster
 Right-click on the web page and click on Translate to 'your language' in the popup.
 
--本Mod涉及到IO和网络下载操作，如有介意，请勿使用！！！！！！！！
+- 本Mod涉及到IO和网络下载操作，如有介意，请勿使用！！！！！！！！
 
 ---
 # 功能
@@ -27,9 +27,9 @@ Right-click on the web page and click on Translate to 'your language' in the pop
 
 ---
 # 注意事项
--系统路径`\`分割符默认只有一个，由于c#转义符的原因，需要将分隔符修改为`\\`
+- 系统路径`\`分割符默认只有一个，由于c#转义符的原因，需要将分隔符修改为`\\`
 
--路径尾不需要再添加分隔符
+- 路径尾不需要再添加分隔符
 
 正确示范：
 
