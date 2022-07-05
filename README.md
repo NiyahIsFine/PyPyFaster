@@ -25,6 +25,8 @@ Right-click on the web page and click on Translate to 'your language' in the pop
 
 "Cache Path" = "D:\\PyPyCache"
 
+
+以上内容也可以提前创建好
 ---
 # 注意事项
 - 系统路径`\`分割符默认只有一个，由于c#转义符的原因，需要将分隔符修改为`\\`
