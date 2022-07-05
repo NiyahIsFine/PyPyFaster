@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32510.428
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PyPyFatser", "PyPyFatser\PyPyFatser.csproj", "{D11D7C8D-5C05-45DF-8B85-CDB36E3CEA4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D11D7C8D-5C05-45DF-8B85-CDB36E3CEA4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D11D7C8D-5C05-45DF-8B85-CDB36E3CEA4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D11D7C8D-5C05-45DF-8B85-CDB36E3CEA4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D11D7C8D-5C05-45DF-8B85-CDB36E3CEA4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9CD6F5B-239F-4801-B054-ECFDCE85C6D9}
+	EndGlobalSection
+EndGlobal
