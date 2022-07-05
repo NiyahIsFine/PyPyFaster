@@ -38,7 +38,7 @@ Right-click on the web page and click on Translate to 'your language' in the pop
 
 正确示范：
 
-"D:\\PyPyCache"
+"D:\\\PyPyCache"
 
 错误示范：
 
