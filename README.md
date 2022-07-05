@@ -43,3 +43,10 @@ Right-click on the web page and click on Translate to 'your language' in the pop
 "D:\PyPyCache"
 
 "D:\\\PyPyCache\\\\"
+
+---
+# 留言
+<p>
+<a href="https://discordapp.com/users/774129741422788618"><img border="0" src="https://s3.bmp.ovh/imgs/2022/06/17/431929905ac3837e.png" width=30/></a>
+</p>
+有BUG或建议联系我
