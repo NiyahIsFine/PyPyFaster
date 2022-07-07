@@ -7,7 +7,9 @@ Right-click on the web page and click on Translate to 'your language' in the pop
 # 功能
 在视频URL更新后比对本地文件，若以有该视频的缓存则直接从本地读取播放，否则会通过异步下载未缓存的视频到本地（仅限PyPyDance列表中的舞蹈视频）。
 
-后续会提供全部视频打包的缓存以及压缩版视频，省去挨个下载的时间。
+
+[视频下载](https://1drv.ms/u/s!Ag4qKKZF16wqgyXvaO6lSOFWN7Fv?e=onf4dg)
+
 
 ---
 # 安装方法
