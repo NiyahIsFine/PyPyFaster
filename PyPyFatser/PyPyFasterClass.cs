@@ -20,6 +20,7 @@ namespace PyPyFatser
         const string urlPattern = @"[^/\\]*$";
         const string content1 = "storage";
         const string content2 = "llss.io";
+        const string content3 = "jd.pypy.moe";
         readonly string cachePath;
         VideoPlayer videoPlayerInstance;
         Text textInstance;
@@ -90,6 +91,23 @@ namespace PyPyFatser
                             if (File.Exists(cachePath + "\\" + match.Value))
                             {
                                 VideoPlayerInstance.url = cachePath + "\\" + match.Value;
+                                OutputLog("Load Local File:" + match.Value, false, ConsoleColor.White);
+                            }
+                            else
+                            {
+                                OutputLog("DL File:" + match.Value, false, ConsoleColor.Green);
+                                WebClient webClient = new WebClient();
+                                webClient.DownloadFileTaskAsync(value, cachePath + "\\" + match.Value);
+                            }
+                        }
+                        else if(value.Contains(content3))
+                        {
+                            var match = Regex.Match(value, urlPattern);
+                            OutputLog("Matching File:" + match.Value, true);
+                            if (File.Exists(cachePath + "\\" + match.Value))
+                            {
+                                VideoPlayerInstance.url = cachePath + "\\" + match.Value;
+                                OutputLog("Load Local File:" + match.Value, false, ConsoleColor.White);
                             }
                             else
                             {
