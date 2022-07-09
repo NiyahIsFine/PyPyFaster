@@ -49,6 +49,7 @@ namespace PyPyFatser
             }
         }
         object routine;
+        object rountine2;
         bool active;
         string lastRecordedText;
         string LastRecordedText
@@ -90,8 +91,7 @@ namespace PyPyFatser
                             OutputLog("Matching File:" + match.Value, true);
                             if (File.Exists(cachePath + "\\" + match.Value))
                             {
-                                VideoPlayerInstance.url = cachePath + "\\" + match.Value;
-                                OutputLog("Load Local File:" + match.Value, false, ConsoleColor.White);
+                                MelonCoroutines.Start(WaittingForNextFramePlayUrl(cachePath + "\\" + match.Value));                           
                             }
                             else
                             {
@@ -106,8 +106,7 @@ namespace PyPyFatser
                             OutputLog("Matching File:" + match.Value, true);
                             if (File.Exists(cachePath + "\\" + match.Value))
                             {
-                                VideoPlayerInstance.url = cachePath + "\\" + match.Value;
-                                OutputLog("Load Local File:" + match.Value, false, ConsoleColor.White);
+                                MelonCoroutines.Start(WaittingForNextFramePlayUrl(cachePath + "\\" + match.Value));                              
                             }
                             else
                             {
@@ -196,6 +195,11 @@ namespace PyPyFatser
             if (active && VideoPlayerInstance != null)
             {
                 LastRecordedURL = VideoPlayerInstance.url;
+                if(GameObject.Find("videoerror")!=null&& rountine2==null)
+                {
+                    OutputLog("videoerror,", false,ConsoleColor.Yellow);
+                    rountine2 = MelonCoroutines.Start(TryToRebornPlayer());
+                }
             }
         }
 
@@ -244,6 +248,29 @@ namespace PyPyFatser
             if (routine != null)
                 routine = null;
         }
+        IEnumerator WaittingForNextFramePlayUrl(string url)
+        {
+            yield return null;
+            VideoPlayerInstance.url = url;
+           // VideoPlayerInstance.Play();
+            OutputLog("Load Local File:" + url, false, ConsoleColor.Blue);
+        }
+        IEnumerator TryToRebornPlayer()
+        {
+            OutputLog("StartCoroutines:TryToRebornPlayer", false, ConsoleColor.Yellow);
+            while (GameObject.Find("videoerror") != null)
+            {
+                OutputLog("TryToRebornPlayer:GameObject.Find(\"videoerror\") != null", true, ConsoleColor.Yellow);
+                if (VideoPlayerInstance == null)
+                    break;
+                VideoPlayerInstance.gameObject.SetActive(false);
+                VideoPlayerInstance.gameObject.SetActive(true);
+                yield return new WaitForSecondsRealtime(2);
+            }      
+            rountine2 = null;
+            OutputLog("EndCoroutines:TryToRebornPlayer", false, ConsoleColor.Yellow);
+        }
+
 
         public void OutputLog(object message, bool debug = false, ConsoleColor consoleColor = ConsoleColor.White, int logType = 0)
         {
